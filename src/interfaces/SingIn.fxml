@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="266.0" style="-fx-background-color: fffffff80;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SingInController">
+   <children>
+      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="265.0" text="Se connecter" textAlignment="CENTER" textFill="#f80808">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="txt_mail" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Email" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="txt_pass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="password">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btn_passoublie" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendpass" styleClass="buttons" stylesheets="@../application/application.css" text="Mot de passe oublier?" textFill="#f80808" />
+            <Button fx:id="btn_connec" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#openHome" styleClass="buttons" stylesheets="@../application/application.css" text="Connexion" textFill="#f80808">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
