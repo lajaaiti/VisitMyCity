@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeAdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #373737;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutY="25.0" prefHeight="83.0" prefWidth="200.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="215.0" layoutX="26.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img8.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="83.0" fitWidth="100.0" layoutX="50.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/LogoVMC.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button layoutX="57.0" layoutY="116.0" mnemonicParsing="false" onMouseClicked="#accueil" prefHeight="25.0" prefWidth="86.0" styleClass="buttons" stylesheets="@../application/application.css" text="Accueil" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="51.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#utilisateurs" prefHeight="25.0" prefWidth="86.0" styleClass="buttons" stylesheets="@../application/application.css" text="Utilisateurs" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="20.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#batiments" prefHeight="25.0" prefWidth="86.0" styleClass="buttons" stylesheets="@../application/application.css" text="Batiments" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="244.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="20.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#favoris" prefHeight="25.0" prefWidth="86.0" styleClass="buttons" stylesheets="@../application/application.css" text="Favoris" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="296.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Separator layoutY="82.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="201.0" layoutY="123.0" prefHeight="417.0" prefWidth="699.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="0.0" />
+      <Pane prefHeight="83.0" prefWidth="699.0" style="-fx-background-color: #373737;" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="33.0" layoutX="627.0" layoutY="23.0" onMouseClicked="#deconnexion" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/deconnexion.png" />
+               </image></ImageView>
+            <Label fx:id="lbl_user" layoutX="460.0" layoutY="25.0" prefHeight="25.0" prefWidth="160.0" text="Nom Utilisateur" textFill="#e9e5e5" />
+            <Label layoutX="55.0" layoutY="25.0" text="Admin" textFill="#ebe3e3">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

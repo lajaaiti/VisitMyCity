@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,19 +9,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SingUpController">
    <children>
-      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="265.0" text="S'inscrire" textAlignment="CENTER" textFill="#f80808">
+      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="265.0" text="S'inscrire" textAlignment="CENTER" textFill="#0d0d0d">
          <VBox.margin>
             <Insets />
          </VBox.margin>
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Civilité" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="txt_nom" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="Nom" style="-fx-background-color: #dedbd3;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TextField>
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="5.0" />
@@ -28,7 +36,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="Nom">
+            <TextField fx:id="txt_prenom" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="Prenom" style="-fx-background-color: #dedbd3;">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -40,7 +48,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="Prenom">
+            <TextField fx:id="txt_email" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="Email" style="-fx-background-color: #dedbd3;">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -52,7 +60,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="Email">
+            <TextField fx:id="txt_ville" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="Ville" style="-fx-background-color: #dedbd3;">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -64,19 +72,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="Adresse">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </TextField>
-         </children>
-         <VBox.margin>
-            <Insets left="15.0" right="15.0" top="5.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
-         <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="CP">
+            <TextField fx:id="txt_cp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="CP" style="-fx-background-color: #dedbd3;">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -91,31 +87,34 @@
             <Insets left="15.0" right="15.0" top="5.0" />
          </VBox.margin>
          <children>
-            <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="236.0" promptText="password">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </TextField>
+            <TextField fx:id="txt_statut" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="statut" style="-fx-background-color: #dedbd3;" />
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
          <VBox.margin>
-            <Insets left="15.0" right="15.0" top="20.0" />
+            <Insets left="15.0" right="15.0" top="5.0" />
          </VBox.margin>
          <children>
-            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="223.0">
-               <padding>
-                  <Insets left="10.0" right="10.0" />
-               </padding>
-               <children>
-                  <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="buttons" stylesheets="@../application/application.css" text="Inscription" textFill="#f80808">
-                     <HBox.margin>
-                        <Insets left="15.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
+            <TextField fx:id="txt_pass" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.75" prefHeight="30.0" prefWidth="236.0" promptText="password" style="-fx-background-color: #dedbd3;">
+               <opaqueInsets>
+                  <Insets bottom="5.0" />
+               </opaqueInsets>
+            </TextField>
          </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="223.0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <children>
+            <Button maxHeight="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#inscription" prefHeight="25.0" prefWidth="159.0" styleClass="buttons" stylesheets="@../application/application.css" text="Inscription" textFill="#f80808" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>

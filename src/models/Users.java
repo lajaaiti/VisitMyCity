@@ -2,19 +2,27 @@ package models;
 
 public class Users {
 	
-	String nom_utilisateur, prenom_utilisateur, email_utilisateur, ville_utilisateur, tel_utilisateur, pass_utilisateur;
+	int id_utilisateur;
+	String nom_utilisateur, prenom_utilisateur, email_utilisateur, ville_utilisateur, pass_utilisateur, statut;
 	
 	public Users() {
 		super();
 		
 	}
-	public Users (String nom_utilisateur, String prenom_utilisateur, String email_utilisateur, String ville_utilisateur, String tel_utilisateur, String pass_utilisateur) {
+	public Users (int id_utilisateur, String nom_utilisateur, String prenom_utilisateur, String email_utilisateur, String ville_utilisateur, String pass_utilisateur, String statut) {
+		this.id_utilisateur=id_utilisateur;
 		this.nom_utilisateur = nom_utilisateur;
 		this.prenom_utilisateur = prenom_utilisateur;
 		this.email_utilisateur = email_utilisateur;
 		this.ville_utilisateur = ville_utilisateur;
-		this.tel_utilisateur = tel_utilisateur;
 		this.pass_utilisateur = pass_utilisateur;
+		this.statut = statut;
+	}
+	public int getId_utilisateur() {
+		return id_utilisateur;
+	}
+	public void setId_utilisateur(int id_utilisateur) {
+		this.id_utilisateur = id_utilisateur;
 	}
 	public String getNom_utilisateur() {
 		return nom_utilisateur;
@@ -40,11 +48,11 @@ public class Users {
 	public void setVille_utilisateur(String ville_utilisateur) {
 		this.ville_utilisateur = ville_utilisateur;
 	}
-	public String getTel_utilisateur() {
-		return tel_utilisateur;
+	public String getStatut() {
+		return statut;
 	}
-	public void setTel_utilisateur(String tel_utilisateur) {
-		this.tel_utilisateur = tel_utilisateur;
+	public void setStatut(String statut) {
+		this.statut = statut;
 	}
 	public String getPass_utilisateur() {
 		return pass_utilisateur;

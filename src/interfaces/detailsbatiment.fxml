@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="387.0" prefWidth="364.0" style="-fx-background-color: red;" />
+      <ImageView fitHeight="189.0" fitWidth="268.0" layoutX="407.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/img7.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="387.0" layoutY="211.0" prefHeight="189.0" prefWidth="292.0" style="-fx-background-color: red;" />
+   </children>
 </AnchorPane>
-

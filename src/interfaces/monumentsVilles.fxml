@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="412.0" prefWidth="690.0" style="-fx-background-color: f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MonumentVilleController">
    <children>
       <GridPane hgap="5.0" prefHeight="412.0" prefWidth="690.0" vgap="5.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
@@ -23,12 +23,15 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="154.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="img_det1" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/img3.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets left="2.5" />
+               </GridPane.margin>
             </ImageView>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="214.0" text="monument" textAlignment="CENTER" textFill="#fdfafa">
+            <Label fx:id="lab_det1" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#detailMonument" prefHeight="45.0" prefWidth="214.0" text="monument" textAlignment="CENTER" textFill="#fdfafa">
                <font>
                   <Font size="35.0" />
                </font>
@@ -39,12 +42,15 @@
                   <Insets left="15.0" />
                </padding>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fx:id="img_det2" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../images/img2.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
             </ImageView>
-            <Label prefHeight="56.0" prefWidth="87.0" text="monument" textFill="#efeded" GridPane.columnIndex="1">
+            <Label fx:id="lab_det2" onMouseClicked="#detailMonument" prefHeight="56.0" prefWidth="87.0" text="monument" textFill="#efeded" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
@@ -55,12 +61,15 @@
                   <Insets left="60.0" />
                </GridPane.margin>
             </Label>
-            <ImageView fitHeight="154.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fx:id="img_det3" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../images/img5.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets left="2.5" />
+               </GridPane.margin>
             </ImageView>
-            <Label text="monument" textFill="#f2efef" GridPane.columnIndex="2">
+            <Label fx:id="lab_det3" onMouseClicked="#detailMonument" text="monument" textFill="#f2efef" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -68,12 +77,15 @@
                   <Insets left="70.0" />
                </GridPane.margin>
             </Label>
-            <ImageView fitHeight="166.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="img_det4" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/img9.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets left="7.0" />
+               </GridPane.margin>
             </ImageView>
-            <Label text="monument" textFill="#f4eeee" GridPane.rowIndex="1">
+            <Label fx:id="lab_det4" onMouseClicked="#detailMonument" text="monument" textFill="#f4eeee" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
@@ -81,12 +93,15 @@
                   <Insets left="50.0" />
                </GridPane.margin>
             </Label>
-            <ImageView fitHeight="165.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="img_ddet5" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/LogoVMC.png" />
                </image>
+               <GridPane.margin>
+                  <Insets left="7.0" />
+               </GridPane.margin>
             </ImageView>
-            <Label text="monument" textFill="#f6f5f5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="lab_det5" onMouseClicked="#detailMonument" text="monument" textFill="#f6f5f5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
@@ -94,12 +109,15 @@
                   <Insets left="65.0" />
                </GridPane.margin>
             </Label>
-            <ImageView fitHeight="166.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: cover;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fx:id="img_det6" fitHeight="150.0" fitWidth="210.0" onMouseClicked="#detailMonument" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/img7.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
             </ImageView>
-            <Label text="monument" textFill="#fff6f6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="lab_det6" onMouseClicked="#detailMonument" text="monument" textFill="#fff6f6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="29.0" />
                </font>

@@ -40,6 +40,9 @@ public class BatimentController implements Initializable {
 	public ResultSet result;
 	
 	 @FXML
+	    private TextField id_user;
+	
+	 @FXML
 	    private TextField txt_type;
 
 	    @FXML
@@ -112,10 +115,14 @@ public class BatimentController implements Initializable {
 	    	String couleur = txt_couleur.getText();
 	    	String toiture = txt_toiture.getText();
 	    	String charpente = txt_charpente.getText();
+	    	String id_utilisateur = id_user.getText();
+	    	
+		
+	    	
 	    	
 	    	File image = new File(label_entrée.getText());
 	    	
-	    	String sql ="INSERT INTO `batiments`( `id_batiment`, `type_batiment`, `nom_batiment`, `adr_batiment`, `architect_batiment`,  `fenetre_batiment`, `toiture_batiment`, `charpente_batiment`, `couleur_batiment`, `image` ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	    	String sql ="INSERT INTO `batiments`( `type_batiment`, `nom_batiment`, `adr_batiment`, `architect_batiment`,  `fenetre_batiment`, `toiture_batiment`, `charpente_batiment`, `couleur_batiment`, `image`, `id_utilisateur`  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	    	try {
 				st = cnx.prepareStatement(sql);
@@ -131,6 +138,7 @@ public class BatimentController implements Initializable {
 				try {
 					fs = new FileInputStream(image);
 					st.setBinaryStream(9, fs, image.length());
+					st.setString(10, id_utilisateur);
 					st.executeUpdate();
 					showbatiment();
 
@@ -357,7 +365,7 @@ public class BatimentController implements Initializable {
 				st = cnx.prepareStatement(sql);
 				result = st.executeQuery();
 				while(result.next()) {
-					listbatiment.add(new monument(result.getString("type_batiment"), result.getString("nom_batiment"), result.getString("adr_batiment"), result.getString("architect_batiment"), result.getString("fenetre_batiment"), result.getString("couleur_batiment"), result.getString("toiture_batiment"), result.getString("charpente_batiment"), result.getString("desc_batiment")));
+					listbatiment.add(new monument(result.getString("type_batiment"), result.getString("nom_batiment"), result.getString("adr_batiment"), result.getString("architect_batiment"), result.getString("fenetre_batiment"), result.getString("couleur_batiment"), result.getString("toiture_batiment"), result.getString("charpente_batiment"), result.getString("desc_batiment"), result.getInt("id_utilisateur")));
 				}
 			} catch (SQLException e) {
 				

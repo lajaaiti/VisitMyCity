@@ -3,7 +3,8 @@
 	-fx-background-color: transparent ;
 }
 .pane{
-	-fx-background-color: #33698F;
+	/*-fx-background-color: #ccc7b8;*/
+	-fx-background-image: url("/images/strasbourgnuit.jpg");
 }
 .trans-btn-white-border{
 	-fx-background-color: transparent ;
@@ -14,10 +15,10 @@
 	-fx-text-fill: whitesmoke ;
 }
 .white-pane{
-	-fx-background-image: url("/images/img10.jpg");
-	-fx-background-size: 281 386;
+	-fx-background-image: url("/images/imgparisN&B.jpg");
+	-fx-background-size: 150 200;
 	-fx-background-position: center center;
-	-fx-background-color: #FFFFFF;
+	-fx-background-color:  #FFFFFF;
 }
 .tf_box{
 	-fx-background-color: transparent ;

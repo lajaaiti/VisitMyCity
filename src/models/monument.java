@@ -1,7 +1,7 @@
 package models;
 
 public class monument {
-	
+	int id_utilisateur;
 	String type_batiment, nom_batiment, adr_batiment, architect_batiment, fenetre_batiment, couleur_batiment, toiture_batiment, charpente_batiment, desc_batiment;
 
 	public monument(){
@@ -9,7 +9,7 @@ public class monument {
 		super();
 	}
 	
-	public monument(String type_batiment, String nom_batiment, String adr_batiment, String architect_batiment, String fenetre_batiment, String couleur_batiment, String toiture_batiment, String charpente_batiment, String desc_batiment) {
+	public monument(String type_batiment, String nom_batiment, String adr_batiment, String architect_batiment, String fenetre_batiment, String couleur_batiment, String toiture_batiment, String charpente_batiment, String desc_batiment, int id_utilisateur) {
 		this.type_batiment = type_batiment;
 		this.nom_batiment = nom_batiment;
 		this.adr_batiment = adr_batiment;
@@ -19,8 +19,25 @@ public class monument {
 		this.toiture_batiment = toiture_batiment;
 		this.charpente_batiment = charpente_batiment;
 		this.desc_batiment = desc_batiment;
+		this.id_utilisateur = id_utilisateur;
 		
 		
+	}
+
+	public int getId_utilisateur() {
+		return id_utilisateur;
+	}
+
+	public void setId_utilisateur(int id_utilisateur) {
+		this.id_utilisateur = id_utilisateur;
+	}
+
+	public String getArchitect_batiment() {
+		return architect_batiment;
+	}
+
+	public void setArchitect_batiment(String architect_batiment) {
+		this.architect_batiment = architect_batiment;
 	}
 
 	public String getDesc_batiment() {

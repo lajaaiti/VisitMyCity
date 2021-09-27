@@ -13,7 +13,7 @@
          <children>
             <Label layoutX="407.0" layoutY="82.0" text="êtes-vous inscrit?" textFill="#ede6e6">
                <font>
-                  <Font size="20.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
             <Button fx:id="btn_connexion" layoutX="441.0" layoutY="174.0" mnemonicParsing="false" onAction="#openSingIn" styleClass="buttons" stylesheets="@../application/application.css" text="Se connecter" />

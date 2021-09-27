@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="417.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BatimentController">
+<AnchorPane prefHeight="417.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BatimentController">
    <children>
       <TextField fx:id="txt_type" layoutX="32.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" promptText="type" />
       <TextField fx:id="txt_nom" layoutX="137.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" promptText="nom" />
@@ -48,11 +48,12 @@
          </styleClass></Button>
       <Button fx:id="btn_modifier" layoutX="271.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#modifierbatiment" prefHeight="25.0" prefWidth="68.0" styleClass="buttons" stylesheets="@../application/application.css" text="Modifier" />
       <TextField fx:id="txt_monumentserche" layoutX="32.0" layoutY="23.0" prefHeight="25.0" prefWidth="187.0" promptText="monument" />
-      <Button fx:id="txt_importimage" layoutX="359.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#importimage" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: red;" styleClass="buttons" text="import_img">
+      <Button fx:id="txt_importimage" layoutX="359.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#importimage" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: red;" styleClass="buttons" text="import_img">
          <stylesheets>
             <URL value="@../application/application.css" />
             <URL value="@../application/application.css" />
          </stylesheets>
       </Button>
+      <TextField fx:id="id_user" layoutX="364.0" layoutY="119.0" prefHeight="25.0" prefWidth="68.0" promptText="id_user" />
    </children>
 </AnchorPane>

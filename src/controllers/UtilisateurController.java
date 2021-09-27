@@ -33,6 +33,9 @@ public class UtilisateurController implements Initializable {
 	
     @FXML
     private TextField txt_nom;
+    
+    @FXML
+    private TextField txt_statut;
 
     @FXML
     private TextField txt_prenom;
@@ -58,8 +61,7 @@ public class UtilisateurController implements Initializable {
     @FXML
     private TextField txt_ville;
 
-    @FXML
-    private TextField txt_telephone;
+   
 
     @FXML
     private TableView<Users> txt_table;
@@ -85,14 +87,14 @@ public class UtilisateurController implements Initializable {
     	String nom = txt_nom.getText();
     	String prenom = txt_prenom.getText();
     	String email = txt_email.getText();
-    	String telephone = txt_telephone.getText();
     	String ville = txt_ville.getText();
+    	String statut = txt_statut.getText();
     	String cp = txt_cp.getText();
     	String motdepasse = txt_motdepasse.getText();
     	
-    	String sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `prenom_utilisateur`, `email_utilisateur`, `ville_utilisateur`, `cp_utilisateur`, `tel_utilisateur`, `pass_utilisateur`) VALUES (?,?,?,?,?,?,?)";
+    	String sql = "INSERT INTO `utilisateurs`(`nom_utilisateur`, `prenom_utilisateur`, `email_utilisateur`, `ville_utilisateur`, `cp_utilisateur`, `pass_utilisateur`, ``statut`) VALUES (?,?,?,?,?,?,?)";
     	
-    	if(!nom.equals("")&&!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!telephone.equals("")&&!motdepasse.equals("")) {
+    	if(!nom.equals("")&&!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!statut.equals("")&&!motdepasse.equals("")) {
     		try {
 			st = cnx.prepareStatement(sql);
 			st.setString(1, nom);
@@ -100,7 +102,7 @@ public class UtilisateurController implements Initializable {
 			st.setString(3, email);
 			st.setString(4, ville);
 			st.setString(5, cp);
-			st.setString(6, telephone);
+			st.setString(6, statut);
 			st.setString(7, motdepasse);
 			st.execute();
 			
@@ -109,7 +111,7 @@ public class UtilisateurController implements Initializable {
 			txt_email.setText("");
 			txt_ville.setText("");
 			txt_cp.setText("");
-			txt_telephone.setText("");
+			txt_statut.setText("");
 			txt_motdepasse.setText("");
 			
 			Alert alert = new Alert(AlertType.CONFIRMATION, "utilisateur ajouté avec succès !!!", javafx.scene.control.ButtonType.OK);
@@ -142,7 +144,7 @@ public class UtilisateurController implements Initializable {
 			txt_email.setText("");
 			txt_ville.setText("");
 			txt_cp.setText("");
-			txt_telephone.setText("");
+			txt_statut.setText("");
 			txt_motdepasse.setText("");
 			
 			Alert alert = new Alert(AlertType.CONFIRMATION, "utilisateur supprimé avec succès !!!", javafx.scene.control.ButtonType.OK);
@@ -162,13 +164,13 @@ public class UtilisateurController implements Initializable {
     	String nom = txt_nom.getText();
     	String prenom = txt_prenom.getText();
     	String email = txt_email.getText();
-    	String telephone = txt_telephone.getText();
+    	String statut = txt_statut.getText();
     	String ville = txt_ville.getText();
     	String cp = txt_cp.getText();
     	String motdepasse = txt_motdepasse.getText();
     	
-    	String sql = "UPDATE `utilisateurs` SET `nom_utilisateur`=?,`prenom_utilisateur`=?,`email_utilisateur`=?,`ville_utilisateur`=?,`cp_utilisateur`=?,`tel_utilisateur`=?,`pass_utilisateur`=? WHERE email_utilisateur = '" + txt_email.getText()+"'";
-    	if(!nom.equals("")&&!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!telephone.equals("")&&!motdepasse.equals("")) {
+    	String sql = "UPDATE `utilisateurs` SET `nom_utilisateur`=?,`prenom_utilisateur`=?,`email_utilisateur`=?,`ville_utilisateur`=?,`cp_utilisateur`=?,`pass_utilisateur`=?, `statut`=? WHERE email_utilisateur = '" + txt_email.getText()+"'";
+    	if(!nom.equals("")&&!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!statut.equals("")&&!motdepasse.equals("")) {
     		try {
     			st = cnx.prepareStatement(sql);
     			st.setString(1, nom);
@@ -176,7 +178,7 @@ public class UtilisateurController implements Initializable {
     			st.setString(3, email);
     			st.setString(4, ville);
     			st.setString(5, cp);
-    			st.setString(6, telephone);
+    			st.setString(6, statut);
     			st.setString(7, motdepasse);
     			st.executeUpdate();
     			
@@ -185,7 +187,7 @@ public class UtilisateurController implements Initializable {
     			txt_email.setText("");
     			txt_ville.setText("");
     			txt_cp.setText("");
-    			txt_telephone.setText("");
+    			txt_statut.setText("");
     			txt_motdepasse.setText("");
     			
     			Alert alert = new Alert(AlertType.CONFIRMATION, "utilisateur modifié avec succès !!!", javafx.scene.control.ButtonType.OK);
@@ -209,7 +211,7 @@ public class UtilisateurController implements Initializable {
     void searchUser() {
     	
     	//il faut penser a mettre un systeme de recherche qui prendra en charge l'email comme base de recherche//////
-    	String sql = "SELECT  nom_utilisateur, prenom_utilisateur, email_utilisateur, ville_utilisateur, cp_utilisateur, tel_utilisateur, pass_utilisateur FROM utilisateurs WHERE email_utilisateur = '"+ txt_emailrecherche.getText() +"'";
+    	String sql = "SELECT  nom_utilisateur, prenom_utilisateur, email_utilisateur, ville_utilisateur, cp_utilisateur, statut, pass_utilisateur FROM utilisateurs WHERE email_utilisateur = '"+ txt_emailrecherche.getText() +"'";
     	int m = 0;
     	try {
 			st = cnx.prepareStatement(sql);
@@ -221,7 +223,7 @@ public class UtilisateurController implements Initializable {
     			txt_email.setText(result.getString("email_utilisateur"));
     			txt_ville.setText(result.getString("ville_utilisateur"));
     			txt_cp.setText(result.getString("cp_utilisateur"));
-    			txt_telephone.setText(result.getString("tel_utilisateur"));
+    			txt_statut.setText(result.getString("statut"));
     			txt_motdepasse.setText(result.getString("pass_utilisateur"));
     			m=1;
 				
@@ -250,7 +252,7 @@ public class UtilisateurController implements Initializable {
 			st = cnx.prepareStatement(sql);
 			result = st.executeQuery();
 			while(result.next()) {
-				data.add(new Users(result.getString("nom_utilisateur"), result.getString("prenom_utilisateur"), result.getString("email_utilisateur"), result.getString("ville_utilisateur"), result.getString("tel_utilisateur"), result.getString("pass_utilisateur")));
+				data.add(new Users(result.getInt("id_utilisateur"),result.getString("nom_utilisateur"), result.getString("prenom_utilisateur"), result.getString("email_utilisateur"), result.getString("ville_utilisateur"), result.getString("statut"), result.getString("pass_utilisateur")));
 			}
 		} catch (SQLException e) {
 			
@@ -281,7 +283,7 @@ public class UtilisateurController implements Initializable {
     			txt_email.setText(result.getString("email_utilisateur"));
     			txt_ville.setText(result.getString("ville_utilisateur"));
     			txt_cp.setText(result.getString("cp_utilisateur"));
-    			txt_telephone.setText(result.getString("tel_utilisateur"));
+    			txt_statut.setText(result.getString("statut"));
     			txt_motdepasse.setText(result.getString("pass_utilisateur"));
 				
 			}
