@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,11 +9,13 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VillesController">
+<AnchorPane fx:id="root" prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: f2f2f2ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VillesController">
    <children>
-      <GridPane fx:id="grille" hgap="5.0" prefHeight="412.0" prefWidth="690.0" vgap="5.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <MediaView fx:id="video" fitHeight="250.0" fitWidth="350.0" layoutX="179.0" layoutY="150.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="181.33333333333337" AnchorPane.topAnchor="150.0" />
+      <GridPane fx:id="grille" hgap="5.0" layoutX="23.0" layoutY="42.0" prefHeight="353.0" prefWidth="687.0" vgap="5.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -20,107 +23,152 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="img_stras" fitHeight="132.0" fitWidth="225.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="img_stras" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Strasbourg-noel.jpg" />
                </image>
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <Label fx:id="lab_stras" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#detail" prefHeight="45.0" prefWidth="181.0" text="Strasbourg" textAlignment="CENTER" textFill="#f6f6f5">
+            <Label fx:id="lab_stras" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#detail" prefHeight="45.0" prefWidth="117.0" text="Strasbourg" textAlignment="CENTER" textFill="#f6f6f5">
                <font>
-                  <Font name="System Bold Italic" size="30.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="5.0" />
                </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
             </Label>
-            <ImageView fx:id="img_paris" fitHeight="132.0" fitWidth="214.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fx:id="img_paris" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../images/Paris.jpg" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
             </ImageView>
             <Label fx:id="lab_paris" onMouseClicked="#detail" prefHeight="56.0" prefWidth="87.0" text="Paris" textFill="#fbfaf7" GridPane.columnIndex="1">
                <font>
-                  <Font name="System Bold Italic" size="30.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <GridPane.margin>
-                  <Insets left="60.0" />
+                  <Insets left="80.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
-            <ImageView fx:id="img_nice" fitHeight="140.0" fitWidth="200.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fx:id="img_nice" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../images/nice.jpg" />
                </image>
                <GridPane.margin>
-                  <Insets left="7.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <Label fx:id="lab_nice" onMouseClicked="#detail" text="Nice" textFill="#f4f4f4" GridPane.columnIndex="2">
                <font>
-                  <Font name="System Bold Italic" size="30.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
                <GridPane.margin>
                   <Insets left="70.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
-            <ImageView fx:id="img_colmar" fitHeight="137.0" fitWidth="224.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="img_colmar11" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/Colmar.jpg" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <GridPane.margin>
-                  <Insets left="3.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
             </ImageView>
-            <Label fx:id="lab_colmar" onMouseClicked="#detail" text="Colmar" textFill="#f6f5f2" GridPane.rowIndex="1">
+            <Label fx:id="lab_colmar1" onMouseClicked="#detail" text="Colmar" textFill="#f6f5f2" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold Italic" size="30.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="50.0" />
+                  <Insets left="70.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
-            <ImageView fx:id="img_sete" fitHeight="139.0" fitWidth="214.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="img_sete1" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/Sète.jpg" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <GridPane.margin>
-                  <Insets left="1.5" />
+                  <Insets left="15.0" />
                </GridPane.margin>
             </ImageView>
-            <Label fx:id="lab_sete" onMouseClicked="#detail" text="Sete" textFill="#f6f6f6" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="System Bold Italic" size="30.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="65.0" />
-               </GridPane.margin>
-            </Label>
-            <ImageView fx:id="img_bordeaux" fitHeight="166.0" fitWidth="207.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fx:id="img_bordeaux1" fitHeight="160.0" fitWidth="190.0" onMouseClicked="#detail" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
                   <Image url="@../images/bordeaux1.jpg" />
                </image>
                <GridPane.margin>
-                  <Insets left="3.0" />
+                  <Insets left="15.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <Label fx:id="lab_bordeaux" onMouseClicked="#detail" text="bordeaux" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="lab_bordeaux1" onMouseClicked="#detail" text="Bordeaux" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold Italic" size="30.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="40.0" />
+                  <Insets left="60.0" />
                </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lab_sete1" onMouseClicked="#detail" text="Sete" textFill="#f6f6f6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="85.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
          </children>
       </GridPane>

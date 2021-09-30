@@ -58,13 +58,13 @@ public class SingUpController implements Initializable {
 	    	String prenom = txt_prenom.getText();
 	    	String email = txt_email.getText();
 	    	String ville = txt_ville.getText();
-	    	String statut = txt_statut.getText();
+	    	String statut = "";
 	    	String cp = txt_cp.getText();
 	    	String motdepasse = txt_pass.getText();
 	    	
 	    	String sql = "INSERT INTO `utilisateurs`(nom_utilisateur, prenom_utilisateur, email_utilisateur, ville_utilisateur, cp_utilisateur, pass_utilisateur, statut) VALUES (?,?,?,?,?,?,?)";
 	    	
-	    	if(!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!statut.equals("")&&!motdepasse.equals("")) {
+	    	if(!nom.equals("")&&!prenom.equals("")&&!email.equals("")&&!ville.equals("")&&!cp.equals("")&&!motdepasse.equals("")) {
 	    		try {
 				st = cnx.prepareStatement(sql);
 				st.setString(1, nom);
@@ -72,8 +72,8 @@ public class SingUpController implements Initializable {
 				st.setString(3, email);
 				st.setString(4, ville);
 				st.setString(5, cp);
-				st.setString(6, statut);
-				st.setString(7, motdepasse);
+				st.setString(6, motdepasse);
+				st.setString(7, statut);
 				st.executeUpdate();
 				
 				txt_nom.setText("");
@@ -81,7 +81,6 @@ public class SingUpController implements Initializable {
 				txt_email.setText("");
 				txt_ville.setText("");
 				txt_cp.setText("");
-				txt_statut.setText("");
 				txt_pass.setText("");
 				
 				Alert alert = new Alert(AlertType.CONFIRMATION, "inscription avec succès !!!", javafx.scene.control.ButtonType.OK);

@@ -12,6 +12,7 @@ import application.ConnexionBDD;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -46,7 +47,7 @@ public class HomeController implements Initializable {
 			root.getChildren().setAll(fxml);
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 			
@@ -61,7 +62,7 @@ public class HomeController implements Initializable {
 				root.getChildren().setAll(fxml);
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}
 
@@ -131,12 +132,31 @@ public class HomeController implements Initializable {
 	    
 	    @FXML
 	    void ajouterbatiments(MouseEvent event) {
+	    	 try {
+					fxml = FXMLLoader.load(getClass().getResource("/interfaces/ajoutBatiment.fxml"));
+					root.getChildren().removeAll();
+					root.getChildren().setAll(fxml);
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 	    }
 
 
 	    @FXML
 	    void listefavoris(MouseEvent event) {
+	    	
+	    	 try {
+					fxml = FXMLLoader.load(getClass().getResource("/interfaces/FavorisUser.fxml"));
+					root.getChildren().removeAll();
+					root.getChildren().setAll(fxml);
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 	    }
 
@@ -154,7 +174,6 @@ public class HomeController implements Initializable {
 				}
 	    	
 	    }
-	  
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

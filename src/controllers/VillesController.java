@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,6 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 
 public class VillesController implements Initializable  {
 	
@@ -20,6 +24,9 @@ public class VillesController implements Initializable  {
 	
 	  @FXML
 	    private AnchorPane root;
+	  
+	  @FXML
+	    private MediaView video;
 	
 
     @FXML
@@ -60,6 +67,11 @@ public class VillesController implements Initializable  {
 
     @FXML
     private Label lab_bordeaux;
+    
+    
+  //  private File file;
+    //private Media media;
+    //private MediaPlayer  player;
 
     @FXML
     void detail(MouseEvent event) {
@@ -76,12 +88,27 @@ public class VillesController implements Initializable  {
 		}
 
     }
+    
+  /*  public void player() {
+    	 String Vurl = "C:\\Users\\lajaa\\eclipse-workspace\\projetcity\\src\\media";
+		 Media media = new Media(Vurl);
+		 player = new MediaPlayer(media);
+		 video.setMediaPlayer(player);
+		 player.play();
+    	
+		file  = new File("C:\\Users\\lajaa\\eclipse-workspace\\projetcity\\src\\media\\visitemycity.mp4");
+		media = new Media(file.toURI().toString());
+		player = new MediaPlayer(media);
+		video.setMediaPlayer(player);
+		player.setAutoPlay(true);
+    }
 
-	
+	*/
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
+		//player();
 		
 	}
 

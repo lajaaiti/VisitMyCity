@@ -4,7 +4,7 @@
 }
 .pane{
 	/*-fx-background-color: #ccc7b8;*/
-	-fx-background-image: url("/images/strasbourgnuit.jpg");
+	-fx-background-image: url("/images/FondTest.png");
 }
 .trans-btn-white-border{
 	-fx-background-color: transparent ;
@@ -15,10 +15,12 @@
 	-fx-text-fill: whitesmoke ;
 }
 .white-pane{
-	-fx-background-image: url("/images/imgparisN&B.jpg");
+	/*-fx-background-image: url("/images/imgparisN&B.jpg");
 	-fx-background-size: 150 200;
 	-fx-background-position: center center;
-	-fx-background-color:  #FFFFFF;
+	-fx-background-color:  #FFFFFF;*/
+	-fx-background-color: transparent ;
+	
 }
 .tf_box{
 	-fx-background-color: transparent ;

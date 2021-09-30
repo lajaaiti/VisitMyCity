@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="417.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjoutBatimentController">
+   <children>
+      <TextField fx:id="txt_type" layoutX="32.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" promptText="type_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_nom" layoutX="137.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" promptText="nom_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_anne" layoutX="246.0" layoutY="65.0" prefHeight="25.0" prefWidth="187.0" promptText="anne_construction">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_adr" layoutX="32.0" layoutY="119.0" prefHeight="25.0" prefWidth="117.0" promptText="adr_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_ville" layoutX="156.0" layoutY="119.0" prefHeight="25.0" prefWidth="68.0" promptText="ville">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_architect" layoutX="246.0" layoutY="119.0" prefHeight="25.0" prefWidth="187.0" promptText="architect_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextArea fx:id="txt_desc" layoutX="34.0" layoutY="155.0" prefHeight="106.0" prefWidth="400.0" promptText="desc_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextArea>
+      <TextField fx:id="txt_fenetre" layoutX="34.0" layoutY="270.0" prefHeight="25.0" prefWidth="127.0" promptText="fenetre_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_toiture" layoutX="175.0" layoutY="270.0" prefHeight="25.0" prefWidth="117.0" promptText="toiture_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <TextField fx:id="txt_charpente" layoutX="315.0" layoutY="270.0" prefHeight="25.0" prefWidth="117.0" promptText="charpente_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txt_couleur" layoutX="39.0" layoutY="311.0" prefHeight="25.0" prefWidth="117.0" promptText="couleur_batiment">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <Label fx:id="label_entrée" layoutX="524.0" layoutY="200.0" text="url/image">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="imagebatiment" fitHeight="167.0" fitWidth="202.0" layoutX="453.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btn_ajoute" layoutX="176.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ajouterbatiment" prefHeight="25.0" prefWidth="140.0" styleClass="buttons" stylesheets="@../application/application.css" text="Ajouter">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="txt_importimage" layoutX="515.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#importimage" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: red;" styleClass="buttons" text="import_img">
+         <stylesheets>
+            <URL value="@../application/application.css" />
+            <URL value="@../application/application.css" />
+         </stylesheets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

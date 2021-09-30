@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="390.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccueilController">
+<AnchorPane prefHeight="390.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccueilController">
    <children>
       <ImageView fx:id="image_batiment" fitHeight="246.0" fitWidth="350.0" layoutX="20.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="89.0" />
       <Pane layoutX="25.0" layoutY="14.0" prefHeight="31.0" prefWidth="510.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
@@ -25,14 +26,32 @@
          </children>
       </Pane>
       <Label layoutX="389.0" layoutY="55.0" text="Batiment :" />
-      <TextField fx:id="txt_batiment" layoutX="387.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;" />
+      <TextField fx:id="txt_batiment" layoutX="387.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
       <Label layoutX="387.0" layoutY="151.0" text="Ville :" />
-      <TextField fx:id="txt_ville" layoutX="387.0" layoutY="169.0" style="-fx-background-color: ffffff;" />
+      <TextField fx:id="txt_ville" layoutX="387.0" layoutY="169.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
       <Label layoutX="389.0" layoutY="202.0" text="Informations :" />
-      <TextArea fx:id="txt_infos" layoutX="387.0" layoutY="229.0" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: ffffff;" />
-      <Button fx:id="suivant" layoutX="565.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#showsuivant" prefHeight="25.0" prefWidth="63.0" styleClass="buttons" stylesheets="@../application/application.css" text="suivant" />
-      <Button fx:id="precedent" layoutX="391.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#showprecedent" styleClass="buttons" stylesheets="@../application/application.css" text="precedent" />
-      <TextField fx:id="txt_adresse" layoutX="387.0" layoutY="121.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;" />
+      <TextArea fx:id="txt_infos" layoutX="387.0" layoutY="229.0" prefHeight="100.0" prefWidth="220.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextArea>
+      <Button fx:id="suivant" layoutX="565.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#showsuivant" prefHeight="25.0" prefWidth="63.0" styleClass="buttons" stylesheets="@../application/application.css" text="suivant">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="precedent" layoutX="391.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#showprecedent" styleClass="buttons" stylesheets="@../application/application.css" text="precedent">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="txt_adresse" layoutX="387.0" layoutY="121.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
       <Label layoutX="389.0" layoutY="103.0" text="Adresse :" />
    </children>
 </AnchorPane>

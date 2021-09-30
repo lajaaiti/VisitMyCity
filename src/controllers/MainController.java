@@ -29,7 +29,7 @@ public class MainController implements Initializable {
     @FXML
     void openSingIn() {
     	TranslateTransition t = new TranslateTransition(Duration.seconds(1),vbox);
-		t.setToX(vbox.getLayoutX() * 20);
+    	t.setToX(0.9);
 		t.play();
 		t.setOnFinished(e->{
 			try {
@@ -48,7 +48,7 @@ public class MainController implements Initializable {
     @FXML
     void openSingUp() {
     	TranslateTransition t = new TranslateTransition(Duration.seconds(1),vbox);
-    	t.setToX(20);
+    	t.setToX(vbox.getLayoutX()*-0.9);
 		t.play();
 		t.setOnFinished(e->{
 			try {
@@ -69,8 +69,21 @@ public class MainController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle ressources) {
 		TranslateTransition t = new TranslateTransition(Duration.seconds(1),vbox);
-		t.setToX(vbox.getLayoutX() * 20);
+		t.setToX(vbox.getLayoutX()*-0.9);
 		t.play();
+		t.setOnFinished(e->{
+			try {
+				fxml = FXMLLoader.load(getClass().getResource("/interfaces/SingUp.fxml"));
+				vbox.getChildren().removeAll();
+				vbox.getChildren().setAll(fxml);
+						
+			} catch (Exception el) {
+				
+				el.printStackTrace();
+				
+			}
+		});
+		
 	}
 
 	

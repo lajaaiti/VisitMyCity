@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FavorisUserController">
+   <children>
+      <ImageView fx:id="image_batiment" fitHeight="246.0" fitWidth="350.0" layoutX="20.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="89.0" />
+      <Pane layoutX="25.0" layoutY="14.0" prefHeight="31.0" prefWidth="510.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label layoutX="26.0" layoutY="2.0" text="Favoris :" textFill="#f4eded">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font></Label>
+            <Label fx:id="lab_nbr" layoutX="96.0" layoutY="7.0" textFill="#f4f0f0">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Label layoutX="389.0" layoutY="55.0" text="Batiment :" />
+      <TextField fx:id="txt_batiment" layoutX="387.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="387.0" layoutY="151.0" text="Ville :" />
+      <TextField fx:id="txt_ville" layoutX="389.0" layoutY="168.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="389.0" layoutY="202.0" text="Informations :" />
+      <TextField fx:id="txt_adresse" layoutX="387.0" layoutY="121.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: ffffff;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="389.0" layoutY="103.0" text="Adresse :" />
+      <TextField fx:id="txt_infos" layoutX="387.0" layoutY="227.0" prefHeight="93.0" prefWidth="218.0" style="-fx-background-color: ffffff;" />
+      <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="86.0" layoutY="320.0" onMouseClicked="#showprecedent" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/suivantbtn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="251.0" layoutY="320.0" onMouseClicked="#showsuivant" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/suivantbtn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

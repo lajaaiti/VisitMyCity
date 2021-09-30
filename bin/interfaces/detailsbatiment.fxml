@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="417.0" prefWidth="699.0" style="-fx-background-color: f2f2f2ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.">
    <children>
-      <Pane layoutX="10.0" layoutY="14.0" prefHeight="387.0" prefWidth="364.0" style="-fx-background-color: red;" />
-      <ImageView fitHeight="189.0" fitWidth="268.0" layoutX="407.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="txt_img" fitHeight="251.0" fitWidth="282.0" layoutX="23.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/img7.jpg" />
          </image>
       </ImageView>
-      <Pane layoutX="387.0" layoutY="211.0" prefHeight="189.0" prefWidth="292.0" style="-fx-background-color: red;" />
+      <Label fx:id="txt_lbl" layoutX="123.0" layoutY="14.0" text="titre monument" />
+      <TextField fx:id="txt_nombtm" layoutX="363.0" layoutY="45.0" prefHeight="25.0" prefWidth="241.0" promptText="nom_batiment" />
+      <TextField fx:id="txt_type" layoutX="363.0" layoutY="93.0" prefHeight="25.0" prefWidth="241.0" promptText="type" />
+      <TextField fx:id="txt_adreville" layoutX="363.0" layoutY="150.0" prefHeight="25.0" prefWidth="241.0" promptText="adresse/ville" />
+      <TextField fx:id="txt_architect" layoutX="363.0" layoutY="202.0" prefHeight="25.0" prefWidth="241.0" promptText="architecte" />
+      <TextField fx:id="tkt_desc" layoutX="24.0" layoutY="275.0" prefHeight="120.0" prefWidth="282.0" promptText="desc" />
+      <Button layoutX="408.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#ajoutfavoris" prefHeight="41.0" prefWidth="151.0" style="-fx-background-radius: 90; -fx-background-color: gray;" text="Ajouter aux Favoris">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

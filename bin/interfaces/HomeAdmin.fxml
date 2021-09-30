@@ -52,8 +52,11 @@
          <children>
             <ImageView fitHeight="35.0" fitWidth="33.0" layoutX="627.0" layoutY="23.0" onMouseClicked="#deconnexion" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/deconnexion.png" />
-               </image></ImageView>
+                  <Image url="@../images/signout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
             <Label fx:id="lbl_user" layoutX="460.0" layoutY="25.0" prefHeight="25.0" prefWidth="160.0" text="Nom Utilisateur" textFill="#e9e5e5" />
             <Label layoutX="55.0" layoutY="25.0" text="Admin" textFill="#ebe3e3">
                <font>

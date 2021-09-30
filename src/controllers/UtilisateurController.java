@@ -178,8 +178,8 @@ public class UtilisateurController implements Initializable {
     			st.setString(3, email);
     			st.setString(4, ville);
     			st.setString(5, cp);
-    			st.setString(6, statut);
-    			st.setString(7, motdepasse);
+    			st.setString(6, motdepasse);
+    			st.setString(7, statut);
     			st.executeUpdate();
     			
     			txt_nom.setText("");

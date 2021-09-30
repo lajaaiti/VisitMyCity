@@ -55,6 +55,8 @@ public class SingInController implements Initializable {
 	    	String sql = "SELECT * FROM utilisateurs WHERE email_utilisateur = '" + mail + "'";
 	    	String statut ="";
 	    	
+	    	if(!mail.equals("")&&!pass.equals("")) {
+	    		
 	    	try {
 				st = cnx.prepareStatement(sql);
 				
@@ -64,12 +66,13 @@ public class SingInController implements Initializable {
 					
 					if(mail.equals(result.getString("email_utilisateur")) && pass.equals(result.getString("pass_utilisateur"))) {
 						
-						String sql1 = "INSERT INTO `users_connect`(`nom_utilisateur`, `prenom_utilisateur`, `email_utilisateur`, `pass_utilisateur`) VALUES (?, ?, ?, ?)";
+						String sql1 = "INSERT INTO users_connect(nom_utilisateur, prenom_utilisateur, email_utilisateur, pass_utilisateur, id_user) VALUES (?, ?, ?, ?, ?)";
 						st = cnx.prepareStatement(sql1);
 						st.setString(1, result.getString("nom_utilisateur"));
 						st.setString(2, result.getString("prenom_utilisateur"));
 						st.setString(3, result.getString("email_utilisateur"));
 						st.setString(4, result.getString("pass_utilisateur"));
+						st.setInt(5, result.getInt("id_utilisateur"));
 			    		st.executeUpdate();						
 			    		vbox.getScene().getWindow().hide();
 			    		Stage home = new Stage();
@@ -101,10 +104,6 @@ public class SingInController implements Initializable {
 			    			
 			    		}
 			    		
-			    		
-			    		
-			    		
-			    		
 			    	}else {
 			    		Alert alert = new Alert(AlertType.ERROR,"email ou mot de passe incorrect!!!!",javafx.scene.control.ButtonType.OK);
 			    		
@@ -118,6 +117,11 @@ public class SingInController implements Initializable {
 				
 				e1.printStackTrace();
 			}
+	    	
+	    	}else {
+	    		Alert alert = new Alert(AlertType.ERROR,"veuillez remplir tout les champs!!!!!",javafx.scene.control.ButtonType.OK);
+	    		alert.showAndWait();
+	    	}
 	    	
 	    	
 	    	
